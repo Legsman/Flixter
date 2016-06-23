@@ -2,14 +2,13 @@
   border-radius:0;
   font-family: "Museo500", Helvetica;
   font-weight: 200;
-  box-shadow: 0 10px 6px -6px #777;
-  background:url('broken_noise.png');
+  background: url('broken_noise.png');
 }
 
 .navbar-inverse a.navbar-brand {
   font-family: "Museo500", Helvetica;
   font-weight: 100;
-  color:white;
+  color:#5cb85c;
 }
 
 .hero {
@@ -45,4 +44,9 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 .btn {
   border-radius:0;
+}
+
+body {
+  background: url('x.png');
+  font-family: "Museo300", sans-serif;
 }
