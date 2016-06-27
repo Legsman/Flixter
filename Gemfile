@@ -58,6 +58,7 @@ gem 'simple_form'
 
 #Add Carrierwave for uploading media
 gem 'carrierwave'
+gem 'carrierwave-aws'
 
 #Add Figaro
 gem 'figaro'
