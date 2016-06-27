@@ -1,0 +1,24 @@
+
+<!-- saved from url=(0050)file:///C:/Users/jojo/Desktop/vagrant/js/ajax.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+</head>
+<body>
+  <script src="./ajax_files/jquery.min.js"></script>
+  <script>
+      $(function() {
+        var h2element = $('h2');
+      h2element.click(function() {
+          $.get( "http://www.catfact.info/api/v1/facts.json?page=2&per_page=2", function( data ) {
+            detail = data.facts[0].details;
+          h2element.html(detail);
+          }); 
+
+        });
+     });
+  </script>
+<h1 class="headline">Hey</h1><h1>
+  </h1><h2 class="headline">salut</h2>
+  <hr>
+  <input id="detail">
+
+</body></html>

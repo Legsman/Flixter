@@ -55,3 +55,12 @@ gem 'devise'
 
 #Add simple form
 gem 'simple_form'
+
+#Add Carrierwave for uploading media
+gem 'carrierwave'
+
+#Add Figaro
+gem 'figaro'
+
+#Add fog 
+gem 'fog'

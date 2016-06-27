@@ -11,10 +11,14 @@
     <br />
     <div class="col-sm-8 col-xs-12">
       <%= course.description %>
+      <br /><br /><br />
+      <div class="text-center"><%= link_to 'More Details...', course_path(course), class: "btn btn-success btn-large" %>
+      </div>
     </div>
     <div class="col-sm-4 col-xs-12 text-center">
-      <%= link_to 'More Details...', course_path(course), class: "btn btn-success btn-large" %>
+      <%= image_tag course.image, class: 'img img-responsive'%>
     </div>
   <br class="clr" />
+  <hr />
     <% end %>
   </div>
