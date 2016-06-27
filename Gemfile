@@ -64,3 +64,6 @@ gem 'figaro'
 
 #Add fog 
 gem 'fog'
+
+#Add miniMagick
+gem 'mini_magick', '~> 4.3.1'
