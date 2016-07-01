@@ -68,3 +68,6 @@ gem 'fog'
 
 #Add miniMagick
 gem 'mini_magick', '~> 4.3.1'
+
+#Add Stripe for payment
+gem 'stripe'
