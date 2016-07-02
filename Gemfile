@@ -71,3 +71,6 @@ gem 'mini_magick', '~> 4.3.1'
 
 #Add Stripe for payment
 gem 'stripe'
+
+# Ranked Model gem to sort list 
+gem 'ranked-model'
