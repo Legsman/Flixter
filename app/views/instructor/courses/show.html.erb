@@ -16,6 +16,18 @@
             }
           });
         });
+         $(function() {
+          $('.sections').sortable({
+           update: function( event, ui ) {
+             $.ajax({
+                type: 'PUT',
+                url: ui.item.data('update-url'),
+                dataType: 'json',
+                data: { section: { row_order_position: ui.item.index() } }
+              });
+            }
+          });
+        });
       </script>
     <br/>
   <div class="text-center">
@@ -23,9 +35,9 @@
   </div>
         <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning pull-right' %>
         <br class="clr" />
-    <ul>
-    <% current_course.sections.each do |section| %>
-      <li>
+    <ul class="sections">
+    <% current_course.sections.rank(:row_order).each do |section| %>
+      <li data-update-url="<%= instructor_section_path(section) %>">
         <%= section.title %>
         <ul class="lessons">
           <% section.lessons.rank(:row_order).each do |lesson| %>
