@@ -30,25 +30,43 @@
         });
       </script>
     <br/>
-  <div class="text-center">
+<div class="buttons col-xs-12">
+  <div class="col-xs-6 text-center">
     <%= link_to 'Add a new section ...', new_instructor_course_section_path(current_course), class: 'btn btn-success btn-lg' %>
   </div>
-        <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning pull-right' %>
+  <div class="col-xs-6 text-center">
+    <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning btn-lg' %>
+  </div>
+</div>
         <br class="clr" />
     <ul class="sections">
     <% current_course.sections.rank(:row_order).each do |section| %>
-      <li data-update-url="<%= instructor_section_path(section) %>">
-        <%= section.title %>
+      <li data-update-url="<%= instructor_section_path(section) %>", class="section-li">
+        <div class="header">
+          <span class="glyphicon glyphicon-list"></span>
+          <%= section.title %>
+        </div>
+        <%= link_to "New Lesson", new_instructor_section_lesson_path(section), class: 'pull-right btn btn-primary' %>
+           <br class="clr" />
+           <br class="clr" />
         <ul class="lessons">
           <% section.lessons.rank(:row_order).each do |lesson| %>
             <li data-update-url="<%= instructor_lesson_path(lesson) %>">
-
-              <b><%= lesson.title %></b>
-              -
-              <%= lesson.subtitle %>
+            <div class="col-xs-1">
+              <br />
+              <span class="glyphicon glyphicon-list"></span>
+            </div>
+            <div class="col-xs-11 text-center">
+              <p>
+                <b><%= lesson.title %></b>
+              </p>
+              <p>
+                <%= lesson.subtitle %>
+              </p>
+           </div>
+           <br class="clr"/>
             </li>
           <% end %>
-           <%= link_to "New Lesson", new_instructor_section_lesson_path(section), class: 'pull-right btn btn-primary btn-xs' %>
         </ul>
         <br class="clr" />
       </li>
