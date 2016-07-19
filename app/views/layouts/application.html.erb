@@ -4,6 +4,7 @@
   <title>Flixter</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
   <link href="//vjs.zencdn.net/5.0.2/video-js.css" rel="stylesheet">
   <script src="//vjs.zencdn.net/5.0.2/video.js"></script>
@@ -68,9 +69,7 @@
       <div class="col-xs-12 col-sm-3">
         <b>About</b>
         <br />
-        <%= link_to 'Team', '#' %>
-        <br />
-        <%= link_to 'Careers', '#' %>
+        <%= link_to 'Team', "https://www.thefirehoseproject.com" %>
         <br />
         <%= link_to 'Privacy Policy', privacy_path %>
       </div>
